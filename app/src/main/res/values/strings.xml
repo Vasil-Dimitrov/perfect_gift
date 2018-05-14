@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Perfect Gift</string>
+    <string name="age_restriction">Възрастово ограничение:</string>
+    <string name="search_filter_title">ФИЛТЪР ЗА ТЪРСЕНЕ НА ПОДАРЪК</string>
+    <string-array name="categories">
+        <item>избери категория..</item>
+        <item>Коли</item>
+        <item>Технологии</item>
+        <item>Спорт</item>
+        <item>Мода</item>
+        <item>Домашни любимци</item>
+    </string-array>
+    <string-array name="items">
+        <item>BMW I8</item>
+        <item>Ford Focus</item>
+        <item>Golf 4</item>
+    </string-array>
+    <string-array name="prices">
+        <item>130,000.00</item>
+        <item>15,000.00</item>
+        <item>5,000.00</item>
+    </string-array>
+    <string-array name="descriptions">
+        <item>НОВ ВНОС от Англия! Колата е в перфектно състояние от всяка гледна точка. Цената не подлежи на договаряне. </item>
+        <item>Колата е като нова отвътре, салон и ходова част без забележки, ревизиран климатик. Всичко по нея работи, алуминиеви джанти с зимни гуми мишелин.</item>
+        <item>Двигател 1.6i Изгодно предложение! Метанова уредба, Кожен салон, Регулиращ се вулан, Ел.стъкла. </item>
+    </string-array>
+    <string name="default_number">0878-334-542</string>
+    <string name="default_email">order@perfectgift.com</string>
+</resources>

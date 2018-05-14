@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/price_text_view"
+        android:layout_marginStart="20dp"
+        android:text="Name"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/description_text_view"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:minLines="1"
+        android:maxLines="4"
+        android:singleLine="false"
+        android:layout_alignStart="@+id/name_text_view"
+        android:layout_below="@+id/name_text_view"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="5dp"
+        android:text="Description" />
+
+    <TextView
+        android:id="@+id/price_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"
+        android:text="Price"
+        android:textSize="18sp" />
+</RelativeLayout>
