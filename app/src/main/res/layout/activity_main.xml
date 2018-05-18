@@ -200,7 +200,7 @@
         android:layout_marginTop="5dp"
         android:ems="10"
         android:hint="0.00"
-        android:inputType="number|numberSigned"
+        android:inputType="number|numberSigned|numberDecimal"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

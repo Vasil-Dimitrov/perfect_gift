@@ -6,8 +6,8 @@ public class SearchFilter {
     String selectedGender;
     String selectedAge;
     String selectedCategory;
-    Float fromPrice;
-    Float toPrice;
+    Double fromPrice;
+    Double toPrice;
 
     public SearchFilter() {}
 
@@ -15,8 +15,8 @@ public class SearchFilter {
         setSelectedGender(intent.getExtras().getString("com.peridot.perfectgift.selectedGender"));
         setSelectedAge(intent.getExtras().getString("com.peridot.perfectgift.selectedAge"));
         setSelectedCategory(intent.getExtras().getString("com.peridot.perfectgift.selectedCategory"));
-        setFromPrice(intent.getExtras().getFloat("com.peridot.perfectgift.fromPrice"));
-        setToPrice(intent.getExtras().getFloat("com.peridot.perfectgift.toPrice"));
+        setFromPrice(intent.getExtras().getDouble("com.peridot.perfectgift.fromPrice"));
+        setToPrice(intent.getExtras().getDouble("com.peridot.perfectgift.toPrice"));
     }
 
     public String getSelectedGender() {
@@ -43,36 +43,36 @@ public class SearchFilter {
         this.selectedCategory = selectedCategory;
     }
 
-    public Float getFromPrice() {
+    public Double getFromPrice() {
         return fromPrice;
     }
 
-    public void setFromPrice(Float fromPrice) {
+    public void setFromPrice(Double fromPrice) {
         this.fromPrice = fromPrice;
     }
 
     public void setFromPrice(String fromPriceString) {
-        this.fromPrice = getFloatValue(fromPriceString);
+        this.fromPrice = getDoubleValue(fromPriceString);
     }
 
-    public Float getToPrice() {
+    public Double getToPrice() {
         return toPrice;
     }
 
-    public void setToPrice(Float toPrice) {
+    public void setToPrice(Double toPrice) {
         this.toPrice = toPrice;
     }
 
     public void setToPrice(String toPriceString) {
-        this.toPrice = getFloatValue(toPriceString);
+        this.toPrice = getDoubleValue(toPriceString);
     }
 
-    private Float getFloatValue(String floatString) {
-        if(!TextUtils.isEmpty(floatString)) {
+    private Double getDoubleValue(String doubleString) {
+        if(!TextUtils.isEmpty(doubleString)) {
             try {
-                return Float.parseFloat(floatString);
+                return Double.parseDouble(doubleString);
             } catch (NumberFormatException e) {
-                return (float) -1;
+                return (double) -1;
             }
         } else {
             return null;

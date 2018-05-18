@@ -12,9 +12,6 @@ import android.widget.TextView;
 import com.peridot.perfectgift.R;
 
 public class DetailViewActivity extends AppCompatActivity {
-    String[] titles;
-    String[] descriptions;
-    String[] prices;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,32 +19,32 @@ public class DetailViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail_view);
 
         Intent intent = getIntent();
-        int index = intent.getIntExtra("com.peridot.perfectgift.ITEM_INDEX", -1);
 
-        if(index > -1) {
-            int pic = getImage(index);
-            ImageView img = (ImageView) findViewById(R.id.imageView);
-            scaleImg(img, pic);
-        }
+        String name = intent.getExtras().getString("com.peridot.perfectgift.ITEM_NAME");
+        String imgageName = intent.getExtras().getString("com.peridot.perfectgift.ITEM_IMAGE");
+        String desc = intent.getExtras().getString("com.peridot.perfectgift.ITEM_DESC");
+        String contactNumber = intent.getExtras().getString("com.peridot.perfectgift.ITEM_NUMBER");
+        String contactEmail = intent.getExtras().getString("com.peridot.perfectgift.ITEM_EMAIL");
+        Double finalPrice = intent.getDoubleExtra("com.peridot.perfectgift.ITEM_PRICE", 0.00);
 
-        titles = getResources().getStringArray(R.array.items);
-        descriptions = getResources().getStringArray(R.array.descriptions);
-        prices = getResources().getStringArray(R.array.prices);
+        int resID = getResources().getIdentifier(imgageName , "drawable", getPackageName());
+        ImageView img = findViewById(R.id.imageView);
+        scaleImg(img, resID);
 
         TextView title = findViewById(R.id.detailed_view_title);
-        title.setText(titles[index]);
+        title.setText(name);
 
         TextView description = findViewById(R.id.detailed_view_description);
-        description.setText(descriptions[index]);
+        description.setText(desc);
 
         TextView price = findViewById(R.id.detailed_view_price);
-        price.setText(prices[index] + "лв.");
+        price.setText(finalPrice + "лв.");
 
         TextView email = findViewById(R.id.detailed_view_email);
-        email.setText("E-mail: " + R.string.default_email);
+        email.setText("E-mail: " + contactEmail);
 
         TextView phone = findViewById(R.id.detailed_view_phone);
-        phone.setText("Телефон: " + R.string.default_number);
+        phone.setText("Телефон: " + contactNumber);
     }
 
     private int getImage(int index) {

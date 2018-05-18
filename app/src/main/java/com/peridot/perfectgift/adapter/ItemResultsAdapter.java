@@ -1,4 +1,4 @@
-package com.peridot.perfectgift;
+package com.peridot.perfectgift.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import com.peridot.perfectgift.R;
 
 public class ItemResultsAdapter extends BaseAdapter {
     LayoutInflater inflater;
